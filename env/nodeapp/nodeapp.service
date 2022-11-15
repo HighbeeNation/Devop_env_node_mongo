@@ -1,0 +1,11 @@
+[Unit]
+Description=Start node app with Forever
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/app
+ExecStart=/usr/bin/forever index.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
